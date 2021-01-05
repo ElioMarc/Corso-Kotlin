@@ -11,7 +11,8 @@ class Triangle(private val a: Double, private val b: Double,private val c: Doubl
         }
     }
     val isEquilateral = a == b && b == c && a > 0
-    val isIsosceles = a == b || a == c || b == c
+    //val isIsosceles = a == b || a == c || b == c
+    val isIsosceles = (a ==b && a != c) || (a == c && b != c) || (c == b && b != a)
     val isScalene = a != b && b != c && c != a
 
     fun getInfoTriangle() {
